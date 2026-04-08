@@ -1,9 +1,8 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
 import axios from "axios";
 import "./App.css";
+import CurrentWeather from "./Search";
+import DailyForecast from "./Search";
 
 function App() {
   function getData() {
@@ -13,9 +12,9 @@ function App() {
   }
 
   return (
-    <div>
-      <h1>Axios Test 🚀</h1>
-      <button onClick={getData}>Get Data</button>
+    <div className="App">
+      <CurrentWeather />
+      <DailyForecast />
     </div>
   );
 }
