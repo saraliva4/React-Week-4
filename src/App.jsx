@@ -5,13 +5,7 @@ import Search from "./Search";
 import CurrentWeather from "./CurrentWeather";
 import DailyForecast from "./DailyForecast";
 
-function App() {
-  function getData() {
-    axios.get("https://api.github.com").then((response) => {
-      console.log(response);
-    });
-  }
-
+export default function App() {
   return (
     <div className="App">
       <Search />
@@ -20,5 +14,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
