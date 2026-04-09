@@ -1,0 +1,45 @@
+.card {
+  width: 100%;
+  max-width: 30rem;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0 0;
+  border: 1px solid #128494;
+}
+
+.sunday.card {
+  margin-bottom: 20px;
+}
+
+h5,
+h6 {
+  text-align: center;
+}
+
+.card-subtitle {
+  font-size: 15px;
+  color: #128494 !important;
+}
+
+.weather {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 200;
+  position: relative;
+  top: -25px;
+}
+
+.temperature {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.weather-emoji {
+  font-size: 50px;
+}
+
+.weather-forecast {
+  position: relative;
+  top: -10px;
+}

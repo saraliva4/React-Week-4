@@ -1,8 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
 import "./App.css";
-import CurrentWeather from "./Search";
-import DailyForecast from "./Search";
+import Search from "./Search";
+import CurrentWeather from "./CurrentWeather";
+import DailyForecast from "./DailyForecast";
 
 function App() {
   function getData() {
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <div className="App">
+      <Search />
       <CurrentWeather />
       <DailyForecast />
     </div>

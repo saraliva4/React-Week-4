@@ -1,0 +1,67 @@
+.card {
+  width: 100%;
+  max-width: 30rem;
+  display: block;
+  margin: 0px auto;
+  padding: 20px 15px 30px;
+  border: 1px solid #128494;
+}
+
+h1.currently,
+h6.currently {
+  text-align: center;
+}
+
+h4.currently {
+  font-size: 20px;
+  padding-top: 10px;
+  font-weight: 400;
+}
+
+.card-subtitle {
+  font-size: 15px;
+  color: #128494 !important;
+}
+
+.current-degrees-emoji {
+  font-size: 50px;
+}
+
+.current-degrees {
+  position: relative;
+  top: -10px;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.celsius-fahrenheit {
+  font-size: 13px;
+  position: relative;
+  bottom: 30px;
+  color: #128494;
+}
+
+a.degree-unit {
+  text-decoration: none;
+  color: black;
+}
+
+a.degree-unit:hover {
+  text-decoration: underline;
+  text-decoration-color: #00b7c2;
+  color: #00b7c2;
+  cursor: pointer;
+}
+
+ul.currently {
+  list-style: none;
+  border-left: 2px solid #00b7c2;
+  position: relative;
+  left: -8px;
+  font-size: smaller;
+  padding: 30px 10px 30px 50px;
+}
+
+.currently.today-hours {
+  font-weight: 200;
+}
