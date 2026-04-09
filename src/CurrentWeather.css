@@ -7,12 +7,12 @@
   border: 1px solid #128494;
 }
 
-h1.currently,
-h6.currently {
+h1,
+h6 {
   text-align: center;
 }
 
-h4.currently {
+h4 {
   font-size: 20px;
   padding-top: 10px;
   font-weight: 400;
@@ -53,7 +53,7 @@ a.degree-unit:hover {
   cursor: pointer;
 }
 
-ul.currently {
+ul {
   list-style: none;
   border-left: 2px solid #00b7c2;
   position: relative;
@@ -62,6 +62,6 @@ ul.currently {
   padding: 30px 10px 30px 50px;
 }
 
-.currently.today-hours {
+.today-hours {
   font-weight: 200;
 }

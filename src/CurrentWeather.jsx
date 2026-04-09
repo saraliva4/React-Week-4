@@ -5,20 +5,17 @@ import "./CurrentWeather.css";
 export default function CurrentWeather() {
   return (
     <div className="CurrentWeather">
-      <div className="today card currently">
-        <div className="card-body currently">
-          <h1 className="card-title currently" id="current-location">
+      <div className="today card">
+        <div className="card-body">
+          <h1 className="card-title" id="current-location">
             Tromsø, Norway
           </h1>
-          <h6
-            className="card-subtitle mb-2 text-muted currently"
-            id="date-zero"
-          >
+          <h6 className="card-subtitle mb-2 text-muted" id="date-zero">
             January 22nd
           </h6>
           <div className="row">
             <div className="col-6">
-              <h4 className="card-text currently mb-5">
+              <h4 className="card-text mb-5">
                 Current temperature
                 <span>
                   <span className="current-degrees-emoji m-2">🌧</span>
@@ -38,7 +35,7 @@ export default function CurrentWeather() {
               </h4>
             </div>
             <div className="col-6">
-              <ul className="currently">
+              <ul>
                 <li>Chance of rain: 86%</li>
                 <li>Humidity: 75%</li>
                 <li>Wind: 10 m/s</li>
@@ -48,32 +45,32 @@ export default function CurrentWeather() {
           <br />
 
           <div className="row">
-            <div className="col-2 today-hours currently" id="hour-one">
+            <div className="col-2 today-hours" id="hour-one">
               14:00
               <br />
               🌧 3°
             </div>
-            <div className="col-2 today-hours currently" id="hour-two">
+            <div className="col-2 today-hours" id="hour-two">
               15:00
               <br />
               🌨 3°
             </div>
-            <div className="col-2 today-hours currently" id="hour-three">
+            <div className="col-2 today-hours" id="hour-three">
               16:00
               <br />
               🌨 3°
             </div>
-            <div className="col-2 today-hours currently" id="hour-four">
+            <div className="col-2 today-hours" id="hour-four">
               17:00
               <br />
               🌨 2°
             </div>
-            <div className="col-2 today-hours currently" id="hour-five">
+            <div className="col-2 today-hours" id="hour-five">
               18:00
               <br />
               🌨 2°
             </div>
-            <div className="col-2 today-hours currently" id="hour-six">
+            <div className="col-2 today-hours" id="hour-six">
               19:00
               <br />
               🌨 2°
