@@ -1,4 +1,3 @@
-import React from "react";
 import axios from "axios";
 import "./CurrentWeather.css";
 
@@ -6,32 +5,32 @@ export default function CurrentWeather() {
   return (
     <div className="CurrentWeather">
       <div className="today card">
-        <div className="card-body">
+        <div className="card-body p-5">
           <h1 className="card-title" id="current-location">
             Tromsø, Norway
           </h1>
-          <h6 className="card-subtitle mb-2 text-muted" id="date-zero">
+          <h6 className="card-subtitle mt-3 mb-5 text-muted" id="date-zero">
             January 22nd
           </h6>
           <div className="row">
             <div className="col-6">
               <h4 className="card-text mb-5">
                 Current temperature
-                <span>
+                <div>
                   <span className="current-degrees-emoji m-2">🌧</span>
                   <span className="current-degrees" id="current-degrees">
                     3
                   </span>
                   <span className="celsius-fahrenheit">
-                    <a href="/" className="degree-unit" id="celsius">
+                    <a href="/" className="degree-unit me-1" id="celsius">
                       °C
                     </a>
                     |
-                    <a href="/" className="degree-unit" id="fahrenheit">
+                    <a href="/" className="degree-unit ms-1" id="fahrenheit">
                       °F
                     </a>
                   </span>
-                </span>
+                </div>
               </h4>
             </div>
             <div className="col-6">

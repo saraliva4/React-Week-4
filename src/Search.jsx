@@ -1,4 +1,3 @@
-import React from "react";
 import axios from "axios";
 import "./Search.css";
 
@@ -12,14 +11,18 @@ export default function Search() {
               <i className="fa-solid fa-magnifying-glass search-icon"></i>
             </span>
             <input
-              className=" search-input"
+              className=" search-input ms-1"
               type="text"
               id="search-input"
               placeholder="Type a city..."
             />
-            <input type="submit" value="Search" className="search-button" />
+            <input
+              type="submit"
+              value="Search"
+              className="search-button ms-1"
+            />
             <button
-              className="current-location-button"
+              className="current-location-button ms-1"
               id="current-location-button"
             >
               Current location

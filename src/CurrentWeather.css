@@ -4,7 +4,7 @@
   display: block;
   margin: 0px auto;
   padding: 20px 15px 30px;
-  border: 1px solid #128494;
+  border: 1px solid var(--secondary-color);
 }
 
 h1,
@@ -20,7 +20,7 @@ h4 {
 
 .card-subtitle {
   font-size: 15px;
-  color: #128494 !important;
+  color: var(--secondary-color) !important;
 }
 
 .current-degrees-emoji {
@@ -38,7 +38,7 @@ h4 {
   font-size: 13px;
   position: relative;
   bottom: 30px;
-  color: #128494;
+  color: var(--secondary-color);
 }
 
 a.degree-unit {
@@ -48,14 +48,14 @@ a.degree-unit {
 
 a.degree-unit:hover {
   text-decoration: underline;
-  text-decoration-color: #00b7c2;
-  color: #00b7c2;
+  text-decoration-color: var(--primary-color);
+  color: var(--primary-color);
   cursor: pointer;
 }
 
 ul {
   list-style: none;
-  border-left: 2px solid #00b7c2;
+  border-left: 2px solid var(--primary-color);
   position: relative;
   left: -8px;
   font-size: smaller;

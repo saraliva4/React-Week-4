@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #00b7c2;
+  --secondary-color: #128494;
+  --background-color: #ffffff;
+
 body {
   font-family: sans-serif;
   background: #fff;
