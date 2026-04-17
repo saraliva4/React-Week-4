@@ -15,7 +15,6 @@ export default function Search() {
               id="search-input"
               className=" search-input ms-1"
               type="text"
-              id="search-input"
               placeholder="Type a city..."
             />
             <input
