@@ -37,12 +37,11 @@ h4 {
   font-size: 13px;
   position: relative;
   bottom: 30px;
-  color: var(--secondary-color);
 }
 
 a.degree-unit {
   text-decoration: none;
-  color: black;
+  color: var(--secondary-color);
 }
 
 a.degree-unit:hover {

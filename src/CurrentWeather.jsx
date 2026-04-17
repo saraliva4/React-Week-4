@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./CurrentWeather.css";
 import FormattedDate from "./FormattedDate.jsx";
+import Temperature from "./Temperature.jsx";
 
 export default function CurrentWeather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -21,7 +22,7 @@ export default function CurrentWeather(props) {
       temperature: response.data.temperature.current,
       wind: response.data.wind.speed,
       humidity: response.data.temperature.humidity,
-      icon: `https://openweathermap.org/payload/api/media/file/10d@2x.png`,
+      icon: response.data.condition.icon,
       description: response.data.condition.description,
       feelsLike: response.data.temperature.feels_like,
       date: new Date(response.data.time * 1000),
@@ -53,21 +54,8 @@ export default function CurrentWeather(props) {
               <div className="col-6 text-end pe-5">
                 <h4 className="card-text">Current temperature</h4>
                 <div>
-                  <span className="current-degrees-emoji m-2">
-                    <img src="{weatherData.icon}" alt="" />
-                  </span>
-                  <span className="current-degrees" id="current-degrees">
-                    {Math.round(weatherData.temperature)}
-                  </span>
-                  <span className="celsius-fahrenheit">
-                    <a href="/" className="degree-unit me-1" id="celsius">
-                      °C
-                    </a>
-                    |
-                    <a href="/" className="degree-unit ms-1" id="fahrenheit">
-                      °F
-                    </a>
-                  </span>
+                  <span className="current-degrees-emoji m-2">🌪</span>
+                  <Temperature celsius={weatherData.temperature} />
                 </div>
               </div>
               <div className="col-6 ps-4 pt-4 border-start">
@@ -84,7 +72,7 @@ export default function CurrentWeather(props) {
               <div className="today-hours" id="hour-one">
                 14:00
                 <br />
-                <img src="{weatherData.icon}" alt="" /> 3°
+                🌧 3°
               </div>
               <div className="today-hours" id="hour-two">
                 15:00
