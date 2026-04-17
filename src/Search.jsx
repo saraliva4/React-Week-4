@@ -7,10 +7,12 @@ export default function Search() {
       <div className="start-50 translate-middle search-bar">
         <div>
           <form id="search-form">
-            <span>
+            <label htmlFor="search-input">
               <i className="fa-solid fa-magnifying-glass search-icon"></i>
-            </span>
+            </label>
+
             <input
+              id="search-input"
               className=" search-input ms-1"
               type="text"
               id="search-input"

@@ -1,10 +1,10 @@
 .card {
   width: 100%;
-  max-width: 30rem;
+  max-width: 40rem;
   display: block;
   margin: 0 auto;
   padding: 10px 0 0;
-  border: 1px solid #128494;
+  border: 1px solid var(--secondary-color);
 }
 
 .sunday.card {
@@ -18,7 +18,7 @@ h6 {
 
 .card-subtitle {
   font-size: 15px;
-  color: #128494 !important;
+  color: var(--secondary-color) !important;
 }
 
 .weather {

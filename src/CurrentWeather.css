@@ -1,9 +1,8 @@
 .card {
   width: 100%;
-  max-width: 30rem;
+  max-width: 40rem;
   display: block;
   margin: 0px auto;
-  padding: 20px 15px 30px;
   border: 1px solid var(--secondary-color);
 }
 
@@ -52,14 +51,13 @@ a.degree-unit:hover {
   color: var(--primary-color);
   cursor: pointer;
 }
-
+.border-start {
+  border-left: 2px solid var(--primary-color) !important;
+  height: 150px;
+}
 ul {
   list-style: none;
-  border-left: 2px solid var(--primary-color);
-  position: relative;
-  left: -8px;
-  font-size: smaller;
-  padding: 30px 10px 30px 50px;
+  padding-left: 15px;
 }
 
 .today-hours {

@@ -12,28 +12,26 @@ export default function CurrentWeather() {
           <h6 className="card-subtitle mt-3 mb-5 text-muted" id="date-zero">
             January 22nd
           </h6>
-          <div className="row">
-            <div className="col-6">
-              <h4 className="card-text mb-5">
-                Current temperature
-                <div>
-                  <span className="current-degrees-emoji m-2">🌧</span>
-                  <span className="current-degrees" id="current-degrees">
-                    3
-                  </span>
-                  <span className="celsius-fahrenheit">
-                    <a href="/" className="degree-unit me-1" id="celsius">
-                      °C
-                    </a>
-                    |
-                    <a href="/" className="degree-unit ms-1" id="fahrenheit">
-                      °F
-                    </a>
-                  </span>
-                </div>
-              </h4>
+          <div className="row align-items-center">
+            <div className="col-6 text-end pe-5">
+              <h4 className="card-text">Current temperature</h4>
+              <div>
+                <span className="current-degrees-emoji m-2">🌧</span>
+                <span className="current-degrees" id="current-degrees">
+                  3
+                </span>
+                <span className="celsius-fahrenheit">
+                  <a href="/" className="degree-unit me-1" id="celsius">
+                    °C
+                  </a>
+                  |
+                  <a href="/" className="degree-unit ms-1" id="fahrenheit">
+                    °F
+                  </a>
+                </span>
+              </div>
             </div>
-            <div className="col-6">
+            <div className="col-6 ps-4 pt-4 border-start">
               <ul>
                 <li>Chance of rain: 86%</li>
                 <li>Humidity: 75%</li>
@@ -43,33 +41,33 @@ export default function CurrentWeather() {
           </div>
           <br />
 
-          <div className="row">
-            <div className="col-2 today-hours" id="hour-one">
+          <div className="d-none d-md-flex justify-content-evenly mt-3">
+            <div className="today-hours" id="hour-one">
               14:00
               <br />
               🌧 3°
             </div>
-            <div className="col-2 today-hours" id="hour-two">
+            <div className="today-hours" id="hour-two">
               15:00
               <br />
               🌨 3°
             </div>
-            <div className="col-2 today-hours" id="hour-three">
+            <div className="today-hours" id="hour-three">
               16:00
               <br />
               🌨 3°
             </div>
-            <div className="col-2 today-hours" id="hour-four">
+            <div className="today-hours" id="hour-four">
               17:00
               <br />
               🌨 2°
             </div>
-            <div className="col-2 today-hours" id="hour-five">
+            <div className="today-hours" id="hour-five">
               18:00
               <br />
               🌨 2°
             </div>
-            <div className="col-2 today-hours" id="hour-six">
+            <div className="today-hours" id="hour-six">
               19:00
               <br />
               🌨 2°
