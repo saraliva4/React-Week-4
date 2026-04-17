@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./CurrentWeather.css";
+import FormattedDate from "./FormattedDate.jsx";
 
 export default function CurrentWeather() {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
-    console.log(response);
     setWeatherData({
       ready: true,
       country: response.data.country,
@@ -16,7 +16,7 @@ export default function CurrentWeather() {
       icon: response.data.condition.icon,
       description: response.data.condition.description,
       feelsLike: response.data.temperature.feels_like,
-      time: response.data.time,
+      date: new Date(response.data.time * 1000),
     });
   }
 
@@ -36,7 +36,7 @@ export default function CurrentWeather() {
               {city}, {weatherData.country}
             </h1>
             <h6 className="card-subtitle mt-3 mb-5 text-muted" id="date-zero">
-              January 22nd
+              <FormattedDate date={weatherData.date} />
             </h6>
             <div className="row align-items-center">
               <div className="col-6 text-end pe-5">
