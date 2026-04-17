@@ -6,7 +6,7 @@ import DailyForecast from "./DailyForecast";
 import Footer from "./Footer";
 
 export default function App() {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("Paris");
 
   return (
     <div className="App">

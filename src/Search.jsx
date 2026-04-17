@@ -6,12 +6,15 @@ export default function Search({ setCity }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    setCity(input);
+    if (input.trim() !== "") {
+      setCity(input);
+    }
   }
 
   function handleChange(event) {
     setInput(event.target.value);
   }
+
   return (
     <div className="Search m-4">
       <div className="start-50 translate-middle search-bar">
