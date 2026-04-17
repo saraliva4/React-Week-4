@@ -3,13 +3,19 @@ import axios from "axios";
 import "./CurrentWeather.css";
 import FormattedDate from "./FormattedDate.jsx";
 
-export default function CurrentWeather() {
+export default function CurrentWeather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
-      country: response.data.country,
+      country:
+        response.data.country === "United States of America"
+          ? "USA"
+          : response.data.country === "United Kingdom"
+            ? "Great Britain"
+            : response.data.country,
       temperature: response.data.temperature.current,
       wind: response.data.wind.speed,
       humidity: response.data.temperature.humidity,
@@ -20,12 +26,11 @@ export default function CurrentWeather() {
     });
   }
 
-  let city = "New York";
+  let city = props.city;
   let unit = "metric";
-  const url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=02f8a7tad0e0efa9c2364cdececoab3a&units=${unit}`;
-  useEffect(() => {
-    axios.get(url).then(handleResponse);
-  }, []);
+
+  const url = `https://api.shecodes.io/weather/v1/current?query=${props.city}&key=YOUR_KEY&units=${unit}`;
+  axios.get(url).then(handleResponse);
 
   if (weatherData.ready) {
     return (
