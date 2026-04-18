@@ -29,39 +29,6 @@ export default function CurrentWeather(props) {
               </ul>
             </div>
           </div>
-
-          <div className="d-none d-md-flex justify-content-evenly mt-3">
-            <div className="today-hours" id="hour-one">
-              14:00
-              <br />
-              🌧 3°
-            </div>
-            <div className="today-hours" id="hour-two">
-              15:00
-              <br />
-              🌨 3°
-            </div>
-            <div className="today-hours" id="hour-three">
-              16:00
-              <br />
-              🌨 3°
-            </div>
-            <div className="today-hours" id="hour-four">
-              17:00
-              <br />
-              🌨 2°
-            </div>
-            <div className="today-hours" id="hour-five">
-              18:00
-              <br />
-              🌨 2°
-            </div>
-            <div className="today-hours" id="hour-six">
-              19:00
-              <br />
-              🌨 2°
-            </div>
-          </div>
         </div>
       </div>
     </div>
