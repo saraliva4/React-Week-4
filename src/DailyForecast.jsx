@@ -1,7 +1,24 @@
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./DailyForecast.css";
 
-export default function DailyForecast() {
+export default function DailyForecast(props) {
+  function handleResponse(response) {
+    console.log(response.data);
+  }
+
+  useEffect(() => {
+    if (!props.coordinates) return;
+
+    let unit = "metric";
+    let longitude = props.coordinates.longitude;
+    let latitude = props.coordinates.latitude;
+
+    let url = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=02f8a7tad0e0efa9c2364cdececoab3a&units=${unit}`;
+
+    axios.get(url).then(handleResponse);
+  }, [props.coordinates]);
+
   return (
     <div className="DailyForecast">
       <div className="monday card mt-4">

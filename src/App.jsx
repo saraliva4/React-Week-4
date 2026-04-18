@@ -1,18 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import Search from "./Search";
-import CurrentWeather from "./CurrentWeather";
-import DailyForecast from "./DailyForecast";
+import Weather from "./Weather";
 import Footer from "./Footer";
 
 export default function App() {
-  const [city, setCity] = useState("Paris");
-
   return (
     <div className="App">
-      <Search setCity={setCity} />
-      <CurrentWeather city={city} />
-      <DailyForecast />
+      <Weather defaultCity="Stockholm" />
       <Footer />
     </div>
   );
