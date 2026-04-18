@@ -54,12 +54,8 @@ export default function DailyForecastInfo(props) {
   return (
     <div className="DailyForecastInfo">
       <div className="card-body">
-        <h5 className="card-title" id="weekday-one">
-          {day()}
-        </h5>
-        <h6 className="card-subtitle mb-2 text-muted" id="date-one">
-          {month()}
-        </h6>
+        <h5 className="card-title">{day()}</h5>
+        <h6 className="card-subtitle mb-2 text-muted">{month()}</h6>
       </div>
       <div className="row">
         <div className="col-6 weather">

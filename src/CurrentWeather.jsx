@@ -7,10 +7,10 @@ export default function CurrentWeather(props) {
     <div className="CurrentWeather">
       <div className="today card">
         <div className="card-body p-5">
-          <h1 className="card-title" id="current-location">
+          <h1 className="card-title">
             {props.weatherData.city}, {props.weatherData.country}
           </h1>
-          <h6 className="card-subtitle mt-3 mb-5 text-muted" id="date-zero">
+          <h6 className="card-subtitle mt-3 mb-5 text-muted">
             <FormattedDate date={props.weatherData.date} />
           </h6>
           <div className="row align-items-center mb-5">

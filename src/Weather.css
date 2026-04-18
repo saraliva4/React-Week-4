@@ -1,8 +1,6 @@
 .search {
   text-align: center;
-  margin: 0 auto;
   padding: 10px 0px 10px 0px;
-  width: 30rem;
 }
 .search-bar {
   position: fixed;
@@ -39,7 +37,10 @@
   border: 1px solid var(--secondary-color);
   background-color: var(--primary-color);
 }
-.search.current-location-button:hover {
-  cursor: pointer;
-  opacity: 0.5;
+.card {
+  width: 100%;
+  max-width: 40rem;
+  display: block;
+  margin: 0px auto;
+  border: 1px solid var(--secondary-color);
 }

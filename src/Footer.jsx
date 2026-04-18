@@ -2,8 +2,8 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <footer class="Footer m-5 text-center">
-      <div class="container">
+    <footer className="Footer m-5 text-center">
+      <div className="container">
         <a
           href="https://github.com/saraliva4/React-Week-4"
           target="_blank"

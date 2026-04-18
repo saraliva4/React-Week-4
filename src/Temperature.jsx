@@ -16,17 +16,10 @@ export default function Temperature(props) {
   if (unit === "celsius") {
     return (
       <span className="Temperature">
-        <span className="current-degrees" id="current-degrees">
-          {Math.round(props.celsius)}
-        </span>
+        <span className="current-degrees">{Math.round(props.celsius)}</span>
         <span className="celsius-fahrenheit">
           °C |
-          <a
-            href="/"
-            className="degree-unit ms-1"
-            onClick={showFahrenheit}
-            id="fahrenheit"
-          >
+          <a href="/" className="ms-1" onClick={showFahrenheit}>
             °F
           </a>
         </span>
@@ -36,16 +29,9 @@ export default function Temperature(props) {
     let fahrenheit = (props.celsius * 9) / 5 + 32;
     return (
       <span className="Temperature">
-        <span className="current-degrees" id="current-degrees">
-          {Math.round(fahrenheit)}
-        </span>
+        <span className="current-degrees">{Math.round(fahrenheit)}</span>
         <span className="celsius-fahrenheit">
-          <a
-            href="/"
-            className="degree-unit me-1"
-            onClick={showCelsius}
-            id="celsius"
-          >
+          <a href="/" className="me-1" onClick={showCelsius}>
             °C
           </a>
           | °F

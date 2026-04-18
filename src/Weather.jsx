@@ -56,13 +56,12 @@ export default function Weather(props) {
         <div className="search m-4">
           <div className="start-50 translate-middle search-bar">
             <div>
-              <form id="search-form" onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit}>
                 <label htmlFor="search-input">
                   <i className="fa-solid fa-magnifying-glass search-icon"></i>
                 </label>
 
                 <input
-                  id="search-input"
                   className=" search-input ms-1"
                   type="text"
                   placeholder="Type a city..."
@@ -74,10 +73,7 @@ export default function Weather(props) {
                   value="Search"
                   className="search-button ms-1"
                 />
-                <button
-                  className="current-location-button ms-1"
-                  id="current-location-button"
-                >
+                <button className="current-location-button ms-1">
                   Current location
                 </button>
               </form>
