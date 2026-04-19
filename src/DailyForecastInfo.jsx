@@ -68,9 +68,11 @@ export default function DailyForecastInfo(props) {
               alt={props.data.condition.description}
             />
           </span>
-          <span className="weather-forecast">Rain</span>
+          <span className="weather-forecast text-capitalize">
+            {props.data.condition.description}
+          </span>
         </div>
-        <div className="col-6 temperature">
+        <div className="col-6 temperature pt-2">
           {maxTemperature()} / {minTemperature()}
         </div>
       </div>

@@ -8,6 +8,20 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
+  function handleCurrentLocation() {
+    navigator.geolocation.getCurrentPosition(searchCurrentLocation);
+  }
+
+  function searchCurrentLocation(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+
+    let unit = "metric";
+    let url = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=02f8a7tad0e0efa9c2364cdececoab3a&units=${unit}`;
+
+    axios.get(url).then(handleResponse);
+  }
+
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
@@ -56,7 +70,7 @@ export default function Weather(props) {
         <div className="search m-4">
           <div className="start-50 translate-middle search-bar">
             <div>
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} className="d-inline">
                 <label htmlFor="search-input">
                   <i className="fa-solid fa-magnifying-glass search-icon"></i>
                 </label>
@@ -73,10 +87,15 @@ export default function Weather(props) {
                   value="Search"
                   className="search-button ms-1"
                 />
-                <button className="current-location-button ms-1">
+              </form>
+              <span>
+                <button
+                  className="current-location-button ms-1"
+                  onClick={handleCurrentLocation}
+                >
                   Current location
                 </button>
-              </form>
+              </span>
             </div>
           </div>
         </div>
