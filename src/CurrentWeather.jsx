@@ -17,7 +17,13 @@ export default function CurrentWeather(props) {
             <div className="col-6 text-end pe-5">
               <h4 className="card-text">Current temperature</h4>
               <div>
-                <span className="current-degrees-emoji m-2">🌪</span>
+                <span className="current-degrees-emoji">
+                  <img
+                    className="mb-4"
+                    src={props.weatherData.iconUrl}
+                    alt={props.weatherData.description}
+                  />
+                </span>
                 <Temperature celsius={props.weatherData.temperature} />
               </div>
             </div>

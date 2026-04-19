@@ -51,6 +51,8 @@ export default function DailyForecastInfo(props) {
     );
   }
 
+  console.log(props.data);
+
   return (
     <div className="DailyForecastInfo">
       <div className="card-body">
@@ -59,7 +61,13 @@ export default function DailyForecastInfo(props) {
       </div>
       <div className="row">
         <div className="col-6 weather">
-          <span className="weather-emoji m-2">🌧</span>
+          <span className="weather-emoji">
+            <img
+              className="pb-2"
+              src={props.data.condition.icon_url}
+              alt={props.data.condition.description}
+            />
+          </span>
           <span className="weather-forecast">Rain</span>
         </div>
         <div className="col-6 temperature">
